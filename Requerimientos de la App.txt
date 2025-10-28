@@ -1,0 +1,97 @@
+Sistema de gestión de ingreso tickes de reparación de equipos electrónicos
+
+1.-Página principal
+Descripción:
+pagina de presentacióin de la app, información general y de contacto
+
+2.-Login y registro.
+    a) Loging:
+        usuario
+        contrasña
+            boton ingresar
+    b) Registro de usuario:
+        Nombres:
+        Apellidos:
+        ID:
+            radiobutton: CI, RUC, Pasaporte
+        País:
+        Provincia:
+        Ciudad:
+        Dirección:
+        Número de Telefono:
+        Celular:
+        Email
+        Acepta Terminos de Contrato:
+        Acepta Publicidad:
+
+en tabs
+
+3.- Nuevo Ticket de trabajo 
+    No.:
+    Cliente:
+        Nombres:
+        Apellidos:
+        ID:
+            radiobutton: CI, RUC, Pasaporte
+        País:
+        Provincia:
+        Ciudad:
+        Dirección:
+        Número de Telefono:
+        Celular:
+        Email:
+
+    Dispositivo:
+        Tipo:
+        Marca:
+        Modelo:
+        No.
+        Serie:
+    
+    Estado de Recepción:
+        Encinde:
+            si, no.
+        Descripción del problema:
+
+        Accesorios:
+    
+    Botonnes: 
+        Nuevo, buscar, editar, actualizar,, cancelar.
+    
+    3.- Informe de ticket 
+    //Estos datos se revisan de la creación delcliente y del ticket
+    No.:
+    Cliente:
+        Nombres:
+        Apellidos:
+        Número de Telefono:
+        Celular:
+        Email:
+
+    Dispositivo:
+        Tipo:
+        Marca:
+        Modelo:
+        No.
+        Serie:
+
+    Estado de Recepción:
+        Encinde:
+            si, no.
+        Descripción del problema:
+
+        Accesorios:
+
+    Diagnostico:
+        Problemas encontrados:
+        Trabajos realizados costo c/u:
+
+    Total:
+    
+    Botones: 
+        Nuevo, buscar, editar, actualizar, cancelar.
+    
+
+
+
+    
