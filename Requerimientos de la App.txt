@@ -58,7 +58,7 @@ en tabs
     Botonnes: 
         Nuevo, buscar, editar, actualizar,, cancelar.
     
-    3.- Informe de ticket 
+4.- Informe de ticket 
     //Estos datos se revisan de la creación delcliente y del ticket
     No.:
     Cliente:
@@ -90,7 +90,20 @@ en tabs
     
     Botones: 
         Nuevo, buscar, editar, actualizar, cancelar.
-    
+5.- Cliente:
+     Nombres:
+        Apellidos:
+        ID:
+            radiobutton: CI, RUC, Pasaporte
+        País:
+        Provincia:
+        Ciudad:
+        Dirección:
+        Número de Telefono:
+        Celular:
+        Email
+        Botones: 
+        Nuevo, buscar, editar, actualizar, cancelar.
 
 
 
