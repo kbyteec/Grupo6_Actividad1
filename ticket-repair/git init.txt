@@ -1,0 +1,3 @@
+git init
+git branch -M main
+git checkout -b Cristina-Enriquez-pagina-principal
