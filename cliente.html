@@ -171,8 +171,32 @@
                                             onclick="marcarBotonActivo(this)"> Actualizar
                                     </button>
                                     <button type="button" class="btn btn-danger btn-lg mb-2 px-4 py-2"
-                                            onclick="marcarBotonActivo(this)"> Cancelar
+                                            onclick="marcarBotonActivo(this)" data-bs-toggle="modal" data-bs-target="#advertenciaModal"> Cancelar
                                     </button>
+
+                                    <!-- Modal de advertencia -->
+                                    <div class="modal fade" id="advertenciaModal" tabindex="-1" aria-labelledby="advertenciaModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content border-warning border-3">
+                                            <div class="modal-header bg-warning">
+                                            <h5 class="modal-title fw-bold text-dark" id="advertenciaModalLabel">Advertencia</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                            </div>
+
+                                            <div class="modal-body text-dark">
+                                            <p class="fs-5 mb-0">
+                                                Estás a punto de salir <strong>sin guardar los cambios</strong>.  
+                                                ¿Deseas continuar?
+                                            </p>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-danger">Salir sin guardar</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </form>

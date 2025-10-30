@@ -144,8 +144,25 @@
       </div>
       
     <!-- cards -->
-      <div class = "mb-3">
-        <a href="#contacto" class="btn btn-primary btn-lg">Iniciar</a>
+      <div class="mb-5">
+        <div class="container">
+          <div class="mb-3 position-relative">
+            <label for="loginEmail" class="form-label">
+              Correo electrónico:
+              <!-- 🔹 Botón con popover -->
+              <button type="button" 
+                      class="btn btn-sm btn-info ms-2" 
+                      data-bs-toggle="popover" 
+                      data-bs-placement="right" 
+                      data-bs-title="Atención"
+                      data-bs-content="Déjanos tu correo para contactarte 😊">
+                ?
+              </button>
+            </label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="tu_correo@ejemplo.com">
+            <div class="form-text">No compartiremos tu correo con nadie.</div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -159,6 +176,8 @@
   <script src="/public/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- JS personalizado -->
-  <script src="js/main.js"></script>
+  <script src="./public/js/script.js"></script>
+
+
 </body>
 </html>

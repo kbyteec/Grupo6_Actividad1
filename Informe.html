@@ -42,7 +42,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-md-9">
                         <form>
                             <!-- Sección de Ticket -->
@@ -186,6 +186,17 @@
                                     </ul>
                                 </div>
                             </div>
+
+                        <legend class="fw-bold">Avance de la Reparación</legend>
+                        <div class="row">
+                            <div class="mb-3">
+                                <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                                
+                            </div>
+                        </div>
+                            
                             
                             
                         </form>
@@ -194,7 +205,7 @@
                         <div class = "mb-3">
                             <div class="d-grid gap-2">
                                 <button class="btn btn-success">Editar</button>
-                                <button class="btn btn-primary">Guardar</button>
+                                <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Se guardarán todos los datos">Guardar</button>
                                 
                                 <!--toast -->
                                 <button id="btnBuscar" type="button" class="btn btn-warning">Buscar</button>
@@ -234,8 +245,9 @@
         <footer class="bg-dark text-white text-center py-3 fixed-bottom">
             &copy; 2025 TicketRepair - Todos los derechos reservados
         </footer>
-        <script src="public/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./public/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./public/js/script.js"></script>
 
-
+        
     </body>
 </html>
