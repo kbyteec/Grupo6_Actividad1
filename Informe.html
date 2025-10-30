@@ -9,23 +9,36 @@
         <link rel="stylesheet" href="public/vendor/bootstrap-5.3.8-dist/css/bootstrap.min.css">
     </head>
     <body>
-        <div class="container">
-            <div class="bg-primary">
-                <div class="mb-3 text-center p-3">
-                    <h1 class="text-white">Gestión de Tickets de Soporte Técnico</h1>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#">TicketRepair</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./app/login.html">Iniciar Sesión</a></li>
+                    </ul>
+                    </div>
                 </div>
-            </div>
+            </nav>
+        </header>
+        <div class="container">
            
                 <div>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tickets</a>
+                            <a class="nav-link" href="./ticket.html">Tickets</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Informes de Tickets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Clientes</a>
+                            <a class="nav-link" href="./cliente.html">Clientes</a>
                         </li>
                     </ul>
                 </div>
@@ -178,15 +191,51 @@
                         </form>
                     </div>
                     <aside class="col-sm-12 col-md-3 text-white p-3">
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-success">Editar</button>
-                            <button class="btn btn-primary">Guardar</button>
-                            <button class="btn btn-warning">Buscar</button>
-                            <button class="btn btn-danger">Cancelar</button>
+                        <div class = "mb-3">
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-success">Editar</button>
+                                <button class="btn btn-primary">Guardar</button>
+                                
+                                <!--toast -->
+                                <button id="btnBuscar" type="button" class="btn btn-warning">Buscar</button>
+                                <!--toast -->
+
+                                <button class="btn btn-danger">Cancelar</button>
+                            </div>
+                        </div>
+
+                        <div class = "col-12">
+                            <div class="align-items-center">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-secondary">Anterior</button>
+                                    <button type="button" class="btn btn-secondary">Siguiente</button>
+                                </div>
+
+                            </div>
+                            
                         </div>
                     </aside>
                 </div>
         </div>
+
+        <div id="toast-container">
+            <div id="liveToast" class="toast align-items-center text-bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body fw-semibold">
+                        Buscando información del ticket...
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <footer class="bg-dark text-white text-center py-3 fixed-bottom">
+            &copy; 2025 TicketRepair - Todos los derechos reservados
+        </footer>
         <script src="public/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+
     </body>
 </html>

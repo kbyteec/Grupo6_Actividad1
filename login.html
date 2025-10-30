@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Inicio de sesión</title>
+    <link href="./public/vendor/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Header / Menu -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">TicketRepair</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container py-4">
+      <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">
+            Ingreso
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro" type="button" role="tab" aria-controls="registro" aria-selected="false">
+            Registro
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-4">
+        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+          <div class="card shadow-sm p-4">
+            <form>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Correo electrónico:</label>
+                <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" required>
+                <div id="emailHelp" class="form-text">No compartiremos tu correo con nadie</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Contraseña:</label>
+                <input type="password" class="form-control" id="loginPassword" required>
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberCheck">
+                <label class="form-check-label" for="rememberCheck">Son mis credenciales</label>
+              </div>
+
+              <div class="alert alert-danger" role="alert">
+                Todos los campos son obligatorios!
+              </div>
+
+              <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="registro-tab">
+          <div class="card shadow-sm p-4">
+            <h4 class="mb-3 text-center">Registro</h4>
+
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-6">
+                <label for="nombres" class="form-label">Nombres</label>
+                <input id="nombres" type="text" class="form-control" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input id="apellidos" type="text" class="form-control" required>
+              </div>
+
+              <div class="col-12">
+                <h5 class="mt-2">Identificación</h5>
+              </div>
+
+              <div class="col-md-4">
+                <label for="idNumero" class="form-label">Número</label>
+                <input id="idNumero" type="text" class="form-control" required>
+              </div>
+
+              <div class="col-md-8 d-flex align-items-center">
+                <div class="form-check me-3">
+                  <input class="form-check-input" type="radio" name="tipoId" id="idCedula" value="cedula" required>
+                  <label class="form-check-label" for="idCedula">Cédula</label>
+                </div>
+                <div class="form-check me-3">
+                  <input class="form-check-input" type="radio" name="tipoId" id="idRuc" value="ruc">
+                  <label class="form-check-label" for="idRuc">RUC</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="tipoId" id="idPasaporte" value="pasaporte">
+                  <label class="form-check-label" for="idPasaporte">Pasaporte</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="pais" class="form-label">País</label>
+                <input id="pais" type="text" class="form-control" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="provincia" class="form-label">Provincia</label>
+                <input id="provincia" type="text" class="form-control" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="ciudad" class="form-label">Ciudad</label>
+                <input id="ciudad" type="text" class="form-control" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input id="direccion" type="text" class="form-control" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="telefono" class="form-label">Número de telefono</label>
+                <input id="telefono" type="tel" class="form-control" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="celular" class="form-label">Celular</label>
+                <input id="celular" type="tel" class="form-control" required>
+              </div>
+
+              <div class="col-md-12">
+                <label for="emailRegistro" class="form-label">Correo</label>
+                <input id="emailRegistro" type="email" class="form-control" required>
+              </div>
+
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="aceptaTerminos" required>
+                  <label class="form-check-label" for="aceptaTerminos">Acepta terminos</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="aceptaPublicidad" checked>
+                  <label class="form-check-label" for="aceptaPublicidad">Acepta Publicidad</label>
+                </div>
+              </div>
+
+              <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 fixed-bottom">
+      &copy; 2025 TicketRepair - Todos los derechos reservados
+    </footer>
+
+    <script src="./public/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

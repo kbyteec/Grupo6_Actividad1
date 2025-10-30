@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Gestión de Tickets de Soporte Técnico
+        </title>
+        <link rel="stylesheet" href="public/vendor/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#">TicketRepair</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./app/login.html">Iniciar Sesión</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+                <div>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ticket.html">Tickets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./Informe.html">Informes de Tickets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Clientes</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div>
+                        <form>
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label class="form-label d-block">Tipo de ID (*)</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tipoID" id="radioCI" value="CI" checked>
+                                        <label class="form-check-label" for="radioCI">C.I.</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tipoID" id="radioRUC" value="RUC">
+                                        <label class="form-check-label" for="radioRUC">RUC</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tipoID" id="radioPasaporte" value="Pasaporte">
+                                        <label class="form-check-label" for="radioPasaporte">Pasaporte</label>
+                                    </div>
+                                </div>
+                            </div>
+                        <script>
+                        // ingresar los datos del cliente
+                        
+                        </script>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label for="id_numero" class="form-label">ID / Número (*)</label>
+                                    <input type="number" 
+                                        class="form-control" 
+                                        id="id_numero" 
+                                        placeholder="Número de identificación (máx. 10 dígitos)" 
+                                        required 
+                                        maxlength="13" 
+                                        oninput="validarLongitud(this)">
+                                    <div class="invalid-feedback" id="mensajeID">
+                                        El número de identificación debe tener maximo 13 dígitos.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label for="nombres" class="form-label">Nombres (*)</label>
+                                    <input type="text" class="form-control" id="nombres" placeholder="Ingresa los nombres" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label for="apellidos" class="form-label">Apellidos (*)</label>
+                                    <input type="text" class="form-control" id="apellidos" placeholder="Ingresa los apellidos" required>
+                                </div>
+                            </div>
+                        <script>
+                        // Ahora form selec donde de despliega un menu para elegir de esta lista en especifico
+                        
+                        </script>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="pais" class="form-label">País</label>
+                                    <select class="form-select" id="pais" required>
+                                        <option value="" disabled selected>Seleccione un país</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="CO">Argentina</option>
+                                        <option value="PE">Brasil</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="provincia" class="form-label">Provincia</label>
+                                    <select class="form-select" id="provincia">
+                                        <option value="" disabled selected>Seleccione una provincia</option>
+                                        <option value="PICHINCHA">Pichincha</option>
+                                        <option value="GUAYAS">Guayas</option>
+                                        <option value="AZUAY">Azuay</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="ciudad" class="form-label">Ciudad</label>
+                                    <select class="form-select" id="ciudad">
+                                        <option value="" disabled selected>Seleccione una ciudad</option>
+                                        <option value="QUITO">Quito</option>
+                                        <option value="GUAYAQUIL">Guayaquil</option>
+                                        <option value="CUENCA">Cuenca</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label for="direccion" class="form-label">Dirección</label>
+                                    <input type="text" class="form-control" id="direccion" placeholder="Calle principal y Secundaria">
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <label for="telefono" class="form-label">Número de Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono" placeholder="escribe aquí">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="celular" class="form-label">Celular</label>
+                                    <input type="tel" class="form-control" id="celular" placeholder="escribe aquí">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="email" class="form-label">Email (*)</label>
+                                    <input type="email" class="form-control" id="email" placeholder="escribe aquí" required>
+                                </div>
+                            </div>
+
+                            <hr>
+                        <script>
+                        // se crean Botones de Acción de Formulario.
+                        
+                        </script>
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-between flex-wrap">
+                                    <button type="button" class="btn btn-primary btn-lg me-2 mb-2 px-4 py-2"
+                                            onclick="marcarBotonActivo(this)"> Nuevo
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-lg me-2 mb-2 px-4 py-2"
+                                            onclick="marcarBotonActivo(this)"> Buscar
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-lg me-2 mb-2 px-4 py-2"
+                                            onclick="marcarBotonActivo(this)"> Editar
+                                    </button>
+                                    <button type="submit" class="btn btn-success btn-lg me-2 mb-2 px-4 py-2"
+                                            onclick="marcarBotonActivo(this)"> Actualizar
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-lg mb-2 px-4 py-2"
+                                            onclick="marcarBotonActivo(this)"> Cancelar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                     </div>
+                </div>
+        </div>
+
+
+        
+
+        <footer class="bg-dark text-white text-center py-3 fixed-bottom">
+            &copy; 2025 TicketRepair - Todos los derechos reservados
+        </footer>
+        <script src="public/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+
+    </body>
+</html>
