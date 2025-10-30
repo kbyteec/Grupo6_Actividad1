@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Gestión de Tickets de Soporte Técnico
+        </title>
+        <link rel="stylesheet" href="public/vendor/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+
+            <h1>
+                Gestión de Tickets de Soporte Técnico
+            </h1>
+           
+                <div>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tickets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Informes de Tickets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Clientes</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <form>
+                            <!-- Sección de Ticket -->
+                            <legend class="fw-bold">Ticket</legend>
+                             <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="txt_noTicket" class="form-label">No:</label>
+                                        <input type="number" class="form-control" id="txt_noTicket" placeholder="0000" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="txt_fecha" class="form-label">Fecha de ingreso:</label>
+                                        <input type="date" class="form-control" id="txt_fecha" placeholder="31/12/2025" readonly>
+                                    </div>
+                                </div>
+                             </div>
+                            
+                            <!-- Sección de Cliente -->
+                            <legend class="fw-bold">Cliente</legend>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="txt_nombres" class="form-label">Nombres:</label>
+                                        <input type="text" class="form-control" id="txt_nombres" placeholder="Diego Díaz" readonly>
+                                     </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="txt_apellidos" class="form-label">Apellidos:</label>
+                                        <input type="text" class="form-control" id="txt_apellidos" placeholder="Díaz" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="txt_noTelefono" class="form-label">Telefono:</label>
+                                        <input type="tel" class="form-control" id="txt_noTelefono" placeholder="022222222" readonly>
+                                     </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="txt_celular" class="form-label">Apellidos:</label>
+                                        <input type="tel" class="form-control" id="txt_celular" placeholder="0999999999" readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <div class="row">
+                                <div class="mb-3">
+                                    <label for="txt_direccion" class="form-label">Dierección:</label>
+                                    <input type="text" class="form-control" id="txt_dirección" placeholder="sd" readonly>
+                                    </div>
+                            </div>
+
+                            <!-- Sección de Dispositivo -->
+                            <legend class="fw-bold">Dispositivo</legend>
+
+                             <div class="mb-3">
+                                <label for="cb_tipoDispositivo" class="form-label">Tipo de Dispositivo</label>
+                                <select class="form-select" id="cb_tipoDispositivo">
+                                    <option selected>Seleccione el tipo de dispositivo:</option>
+                                    <option value="celular">Celular</option>
+                                    <option value="tablet">Tablet</option>
+                                    <option value="cpu">CPU</option>
+                                    <option value="laptop">Laptop</option>
+                                    <option value="impresora">Impresora</option>
+                                    <option value="monitor">Monitor</option>
+                                    <option value="mainboard">Mainboard</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="txt_marca" class="form-label">Marca:</label>
+                                        <input type="text" class="form-control" id="txt_marca" placeholder="Apple" readonly>
+                                     </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="txt_modelo" class="form-label">Modelo:</label>
+                                        <input type="text" class="form-control" id="txt_modelo" placeholder="A2141" readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="txt_no" class="form-label">No. de Parte:</label>
+                                        <input type="text" class="form-control" id="txt_no" placeholder="EMC2345" readonly>
+                                     </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="mb-3">
+                                        <label for="txt_serie" class="form-label">Serie:</label>
+                                        <input type="text" class="form-control" id="txtserie" placeholder="AX877CNJ53809" readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <legend class="fw-bold">Estado del Dispositivo</legend>
+
+                            <div class="row">
+                                <div class="mb-3">
+                                    <div class="form-check form-switch">
+                                        <label class="form-check-label" for="sw_enciende">Prende</label>
+                                        <input class="form-check-input" type="checkbox" role="switch" id="sw_enciende">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="mb-3">
+                                    <label for="descripcion" class="form-label">Descripción</label>
+                                    <textarea class="form-control" id="descripcion" rows="3" placeholder="Describa el problema">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam eos cupiditate temporibus atque earum officia odio quia maiores suscipit a.</textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="mb-3">
+                                    <ul class="list-group">
+                                        <li class="list-group-item active fw-bold">Informe Tecnico:</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">Morbi leo risus</li>
+                                        <li class="list-group-item">Porta ac consectetur ac</li>
+                                        <li class="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            
+                        </form>
+                    </div>
+                    <aside class="col-sm-12 col-md-3 text-white p-3">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success">Editar</button>
+                            <button class="btn btn-primary">Guardar</button>
+                            <button class="btn btn-warning">Buscar</button>
+                            <button class="btn btn-danger">Cancelar</button>
+                        </div>
+                    </aside>
+                </div>
+        </div>
+        <script src="public/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
