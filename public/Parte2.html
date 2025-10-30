@@ -1,115 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio de sesión</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="d-grid gap-2">
-        <h3>Inicia sesión</h3>
-    </div><br>
-<form>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Correo electronico:</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">No compartiremos tu correo con nadie</div>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Contraseña:</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Son mis credenciales</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Comprobar info</button>
-</form><br>
+  <div class="container py-4">
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">
+          Ingreso
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro" type="button" role="tab" aria-controls="registro" aria-selected="false">
+          Registro
+        </button>
+      </li>
+    </ul>
 
-<form>
-    <div class="col-md-6">
-              <label class="form-label">Nombres</label>
-              <input type="text" class="form-control" required>
-    </div>
-    <div class="col-md-6">
-              <label class="form-label">Apellidos</label>
-              <input type="text" class="form-control" required>
-    </div><br>
-    <h4>Identificacion:</h4><br>
-    <form>
-    <div class="col-md-6">
-        <label class="form-label">Numero:</label>
-        <input type="text" class="form-control" required>
-    </div>
-</form>
-    <div class="form-check">
-    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-    <label class="form-check-label" for="radioDefault1">
-        Cedula
-    </label>
-    </div>
-    <div class="form-check">
-    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
-    <label class="form-check-label" for="radioDefault2">
-        RUC
-    </label>
-    </div>
-    </div>
-    <div class="form-check">
-    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
-    <label class="form-check-label" for="radioDefault2">
-        Pasaporte
-    </label>
-    </div>
-<form>
-    <div class="col-md-6">
-              <label class="form-label">País:</label>
-              <input type="text" class="form-control" required>
-    </div>
-    <div class="col-md-6">
-              <label class="form-label">Provincia:</label>
-              <input type="text" class="form-control" required>
-    </div>
-    <div class="col-md-6">
-              <label class="form-label">Ciudad:</label>
-              <input type="text" class="form-control" required>
-    </div>
-    <div class="col-md-6">
-              <label class="form-label">Dirección:</label>
-              <input type="text" class="form-control" required>
-    </div>
-    <div class="col-md-6">
-              <label class="form-label">Número de Telefono:</label>
-              <input type="text" class="form-control" required>
-    </div>
-    <div class="col-md-6">
-              <label class="form-label">Celular</label>
-              <input type="text" class="form-control" required>
-    </div>
-    <div class="col-md-6">
-              <label class="form-label">Email:</label>
-              <input type="text" class="form-control" required>
-    </div>
-</form>
+    <div class="tab-content mt-4">
+      <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+        <div class="card shadow-sm p-4">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Correo electrónico:</label>
+              <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" required>
+              <div id="emailHelp" class="form-text">No compartiremos tu correo con nadie</div>
+            </div>
 
-</form><br>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Contraseña:</label>
+              <input type="password" class="form-control" id="loginPassword" required>
+            </div>
 
-    <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-    <label class="form-check-label" for="checkDefault">
-        Acepta Terminos de Contrato:
-    </label>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="rememberCheck">
+              <label class="form-check-label" for="rememberCheck">Son mis credenciales</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Comprobar info</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="registro-tab">
+        <div class="card shadow-sm p-4">
+          <h4 class="mb-3 text-center">Registro</h4>
+
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+              <label for="nombres" class="form-label">Nombres</label>
+              <input id="nombres" type="text" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="apellidos" class="form-label">Apellidos</label>
+              <input id="apellidos" type="text" class="form-control" required>
+            </div>
+
+            <div class="col-12">
+              <h5 class="mt-2">Identificación</h5>
+            </div>
+
+            <div class="col-md-4">
+              <label for="idNumero" class="form-label">Número</label>
+              <input id="idNumero" type="text" class="form-control" required>
+            </div>
+
+            <div class="col-md-8 d-flex align-items-center">
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="tipoId" id="idCedula" value="cedula" required>
+                <label class="form-check-label" for="idCedula">Cédula</label>
+              </div>
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="tipoId" id="idRuc" value="ruc">
+                <label class="form-check-label" for="idRuc">RUC</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="tipoId" id="idPasaporte" value="pasaporte">
+                <label class="form-check-label" for="idPasaporte">Pasaporte</label>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="pais" class="form-label">País</label>
+              <input id="pais" type="text" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="provincia" class="form-label">Provincia</label>
+              <input id="provincia" type="text" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="ciudad" class="form-label">Ciudad</label>
+              <input id="ciudad" type="text" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="direccion" class="form-label">Dirección</label>
+              <input id="direccion" type="text" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="telefono" class="form-label">Número de telefono</label>
+              <input id="telefono" type="tel" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="celular" class="form-label">Celular</label>
+              <input id="celular" type="tel" class="form-control" required>
+            </div>
+
+            <div class="col-md-12">
+              <label for="emailRegistro" class="form-label">Correo</label>
+              <input id="emailRegistro" type="email" class="form-control" required>
+            </div>
+
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="aceptaTerminos" required>
+                <label class="form-check-label" for="aceptaTerminos">Acepta terminos</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="aceptaPublicidad" checked>
+                <label class="form-check-label" for="aceptaPublicidad">Acepta Publicidad</label>
+              </div>
+            </div>
+
+            <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="checkChecked" checked>
-    <label class="form-check-label" for="checkChecked">
-        Acepta Publicidad:
-    </label>
-    </div>
-    <div class="d-grid gap-2 d-md-block">
-        <button class="btn btn-primary" type="button">Registrate</button>
-    </div><br><br>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
